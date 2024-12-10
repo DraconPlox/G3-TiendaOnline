@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -71,9 +70,32 @@
     <button>Agregar producto</button>
     <button>Eliminar producto</button>
     <!-- FIN DE PRODUCTOS-->
+  
+    <!-- INICIO CARRTIO DE COMPRAS -->
+    <table>
+        <thead>
+            <tr>
+                <th><img src="/images/carrito.png" alt="Carrito"></th>
+            </tr>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="productosCarrito">
 
-    <script src="script.js"></script>
-
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td id="precioCarrito"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- FIN CARRITO DE COMPRAS -->
+  
+  <script src="script.js"></script>
+  
 </body>
 
 </html>
