@@ -1,0 +1,17 @@
+/*Carrito*/
+#tablaCarrito, #tablaCarrito td, #tablaCarrito th{
+    border: 1px solid black;
+}
+#tablaCarrito thead{
+    background-color: lightcyan;
+}
+#imagenCarrito{
+    width: 30;
+}
+#btnCarrito{
+    background-color: lightcyan;
+    border-radius: 4px;
+}
+#btnCarrito:hover{
+    background-color: rgb(158, 211, 211);
+}

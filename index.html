@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -34,10 +35,10 @@
     </div>
     <button>Agregar producto</button>
     <button>Eliminar producto</button>
-    <table>
+    <table id="tablaCarrito">
         <thead>
             <tr>
-                <th><img src="/images/carrito.png" alt="Carrito"></th>
+                <th colspan="2"><img src="/images/carrito.png" alt="Carrito" id="imagenCarrito"></th>
             </tr>
             <tr>
                 <th>Producto</th>
@@ -51,6 +52,9 @@
             <tr>
                 <td>Total</td>
                 <td id="precioCarrito"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnCarrito">Comprar</button></td>
             </tr>
         </tfoot>
     </table>
