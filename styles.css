@@ -42,6 +42,7 @@ body {
     background-color: #f9f9f9;
     position: sticky;
     bottom: 0;
+    color: black;
 }
 
 #precioCarrito {
@@ -130,6 +131,55 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* Encabezado */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#imgTienda {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+#imgTienda img {
+    max-width: 70px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    flex: 1 1 auto;
+    text-align: center;
+    margin-right: 250px;
+}
+
+#infoTienda {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    margin-right: 320px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+}
+
+#infoTienda p {
+    margin: 0;
+    text-align: justify;
 }
 
 /* Responsive */
