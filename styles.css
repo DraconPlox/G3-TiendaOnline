@@ -21,6 +21,10 @@ body {
     color: white;
 }
 
+#tablaCarrito tbody{
+    color: black;
+}
+
 #tablaCarrito thead {
     background-color: #3498db;
     text-align: center;
@@ -60,6 +64,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     display: block;
+    color: white
 }
 
 #btnCarrito:hover {
@@ -109,9 +114,18 @@ body {
     text-align: left;
 }
 
-button {
+img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Opciones de compra */
+
+#agregar {
     padding: 12px 24px;
-    margin: 10px;
+    margin: 20px;
     background-color: #3498db;
     border: none;
     border-radius: 4px;
@@ -121,18 +135,62 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#agregar:hover {
     background-color: #2980b9;
     color: #fff;
 }
 
-img {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+#remover {
+    padding: 12px 24px;
+    margin: 20px;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+#remover:hover {
+    background-color: rgb(211, 0, 0);
+    color: #fff;
+}
+
+label{
+    width: 70px;
+    padding: 12px 24px;
+    margin: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: black;
+}
+
+#seleccion {
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+}
+
+#seleccion option {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+label, #seleccion, #agregar, #remover {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    transform: translateX(-150px);
+}
 /* Encabezado */
 
 header {
@@ -162,7 +220,7 @@ header {
 header h1 {
     flex: 1 1 auto;
     text-align: center;
-    margin-right: 250px;
+    margin-right: 400px;
 }
 
 #infoTienda {
@@ -189,6 +247,23 @@ header h1 {
     #tablaCarrito {
         width: 250px;
     }
+    
+    label, #seleccion, #agregar, #remover {
+        width: 100%;
+        margin: 10px 0;
+        transform: none;
+        text-align: center;
+    }
+
+    #agregar, #remover {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #seleccion {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -199,7 +274,13 @@ header h1 {
     }
 
     .producto {
-        margin: 10px 0;
+        margin: 10px 20px 0 10px;
+        padding: 10px;
+        margin-right: 0; 
+    }
+
+    #infoTienda{
+        margin: 10px 20px 0 10px;
         padding: 10px;
         margin-right: 0; 
     }
@@ -214,5 +295,20 @@ header h1 {
 
     .producto .precio {
         font-size: 24px;
+    }
+
+    label, #seleccion, #agregar, #remover {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    #agregar, #remover {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    #seleccion {
+        font-size: 12px;
+        padding: 6px;
     }
 }
