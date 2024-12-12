@@ -1,0 +1,314 @@
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Carrito */
+
+#tablaCarrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px solid black;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+#tablaCarrito tbody{
+    color: black;
+}
+
+#tablaCarrito thead {
+    background-color: #3498db;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+#tablaCarrito th, #tablaCarrito td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tablaCarrito th {
+    font-weight: bold;
+}
+
+#tablaCarrito tfoot {
+    background-color: #f9f9f9;
+    position: sticky;
+    bottom: 0;
+    color: black;
+}
+
+#precioCarrito {
+    font-weight: bold;
+    text-align: right;
+}
+
+#btnCarrito {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    color: white
+}
+
+#btnCarrito:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+#imagenCarrito {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Productos */
+
+.producto {
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.producto .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.producto .precio {
+    font-size: 30px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
+    text-align: left;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Opciones de compra */
+
+#agregar {
+    padding: 12px 24px;
+    margin: 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#agregar:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+#remover {
+    padding: 12px 24px;
+    margin: 20px;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#remover:hover {
+    background-color: rgb(211, 0, 0);
+    color: #fff;
+}
+
+label{
+    width: 70px;
+    padding: 12px 24px;
+    margin: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: black;
+}
+
+#seleccion {
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+}
+
+#seleccion option {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+label, #seleccion, #agregar, #remover {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    transform: translateX(-150px);
+}
+/* Encabezado */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#imgTienda {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+#imgTienda img {
+    max-width: 70px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    flex: 1 1 auto;
+    text-align: center;
+    margin-right: 400px;
+}
+
+#infoTienda {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    margin-right: 320px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+}
+
+#infoTienda p {
+    margin: 0;
+    text-align: justify;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    /* Tablets */
+    #tablaCarrito {
+        width: 250px;
+    }
+    
+    label, #seleccion, #agregar, #remover {
+        width: 100%;
+        margin: 10px 0;
+        transform: none;
+        text-align: center;
+    }
+
+    #agregar, #remover {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #seleccion {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Móviles */
+    #tablaCarrito {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto {
+        margin: 10px 20px 0 10px;
+        padding: 10px;
+        margin-right: 0; 
+    }
+
+    #infoTienda{
+        margin: 10px 20px 0 10px;
+        padding: 10px;
+        margin-right: 0; 
+    }
+
+    #btnCarrito {
+        width: 100%;
+    }
+
+    .producto .titulo {
+        font-size: 18px;
+    }
+
+    .producto .precio {
+        font-size: 24px;
+    }
+
+    label, #seleccion, #agregar, #remover {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    #agregar, #remover {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    #seleccion {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

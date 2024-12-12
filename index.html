@@ -7,16 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<header>
-    <h1>TecnoHogar</h1>
-</header>
-
 <body>
+    <header>
+        <div id="imgTienda">
+            <img src="images/logoTiendaTecn.webp" alt="Contiene el logo de la tienda" />
+        </div>
+        <h1>TecnoHogar</h1>
+    </header>
 
-    <!-- INICIO DE IMAGÉN DE LA TIENDA-->
-    <div id="imgTienda">
-        <img src="images/logoTiendaTecn.webp" alt="Contiene el logo de la tienda" />
-    </div>
     <!-- FIN DE IMAGÉN DE LA TIENDA -->
 
     <!-- INICIO DE INFORMACIÓN SOBRE LA TIENDA -->
@@ -70,10 +68,10 @@
     <!-- FIN DE PRODUCTOS-->
   
     <!-- INICIO CARRTIO DE COMPRAS -->
-    <table>
+    <table id="tablaCarrito">
         <thead>
             <tr>
-                <th><img src="/images/carrito.png" alt="Carrito"></th>
+                <th colspan="2"><img src="images/carrito.png" alt="Carrito" id="imagenCarrito"></th>
             </tr>
             <tr>
                 <th>Producto</th>
@@ -88,9 +86,13 @@
                 <td>Total</td>
                 <td id="precioCarrito"></td>
             </tr>
+            <tr>
+                <td colspan="2"><button id="btnCarrito">Comprar</button></td>
+            </tr>
         </tfoot>
     </table><br><br>
     <label>Producto:</label>
+    <div id="opcionesCompra">
     <select id="seleccion">
         <option>Selecciona un producto</option>
         <option>Television Xiaomi</option>
@@ -101,6 +103,7 @@
     </select><br><br>
     <button id="agregar">Agregar producto</button>
     <button id="remover">Eliminar producto</button>
+    </div>
     <!-- FIN CARRITO DE COMPRAS -->
   
   <script src="script.js"></script>
