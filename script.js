@@ -6,7 +6,7 @@ let tbody = document.getElementById("productosCarrito");
 
 function agregarProducto() {
     let seleccion = selector.value;
-    
+
     //Hacer los elementos necesarios para la tabla.
     let tr = document.createElement("tr");
     let tdProducto = document.createElement("td");
@@ -28,8 +28,30 @@ function agregarProducto() {
 }
 
 function removerProducto() {
-    alert("Remover");
-    
+    let seleccion = selector.value
+
+    if (seleccion == "Selecciona un producto") {
+        alert("Debes seleccionar un producto para eliminar.");
+        return;
+    }
+
+    // Obtenemos el ID del producto
+    let id = seleccion.split(" ")[0].toLowerCase();
+    let idProducto = document.querySelector(`#${id} .titulo`).textContent.trim();
+
+    let trProductos = tbody.getElementsByTagName("tr");
+
+    for (let i = 0; i < trProductos.length; i++) {
+
+        let producto = trProductos[i].getElementsByTagName("td")[0];
+
+        if (producto && producto.textContent.trim() == idProducto) {
+            tbody.deleteRow(i);
+            alert("Producto eliminado")
+            break;
+        }
+    }
+
     actualizarPrecio()
 }
 
@@ -39,6 +61,7 @@ function comprar() {
 }
 
 function actualizarPrecio(){
+
     let precios = document.getElementById("productosCarrito").getElementsByTagName("th")
     let precioTotal = 0
     for (let i = 0; i < precios.length; i++) {
