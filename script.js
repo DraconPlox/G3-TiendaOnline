@@ -1,5 +1,6 @@
 document.getElementById("agregar").addEventListener("click", agregarProducto);
 document.getElementById("remover").addEventListener("click", removerProducto);
+document.getElementById("btnCarrito").addEventListener("click", comprar)
 let selector = document.getElementById("seleccion");
 let tbody = document.getElementById("productosCarrito");
 
@@ -54,7 +55,13 @@ function removerProducto() {
     actualizarPrecio()
 }
 
-function actualizarPrecio() {
+function comprar() {
+    alert("Se ha hecho la compra")
+    location.reload()
+}
+
+function actualizarPrecio(){
+
     let precios = document.getElementById("productosCarrito").getElementsByTagName("th")
     let precioTotal = 0
     for (let i = 0; i < precios.length; i++) {
