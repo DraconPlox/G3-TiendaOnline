@@ -1,5 +1,6 @@
 document.getElementById("agregar").addEventListener("click", agregarProducto);
 document.getElementById("remover").addEventListener("click", removerProducto);
+document.getElementById("btnCarrito").addEventListener("click", comprar)
 let selector = document.getElementById("seleccion");
 let tbody = document.getElementById("productosCarrito");
 
@@ -30,6 +31,11 @@ function removerProducto() {
     alert("Remover");
     
     actualizarPrecio()
+}
+
+function comprar() {
+    alert("Se ha hecho la compra")
+    location.reload()
 }
 
 function actualizarPrecio(){
